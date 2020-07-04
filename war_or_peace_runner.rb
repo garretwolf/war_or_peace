@@ -70,5 +70,7 @@ class NewGame
     deck_of_cards << card50 = Card.new(:club, 'Queen', 12)
     deck_of_cards << card51 = Card.new(:club, 'King', 13)
     deck_of_cards << card52 = Card.new(:club, 'Ace', 14)
+
+    deck_of_cards.shuffle
   end
 end
