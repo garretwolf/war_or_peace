@@ -73,4 +73,9 @@ class NewGame
 
     deck_of_cards.shuffle
   end
+
+  def split_deck
+    deck1 = deck_of_cards[0..26]
+    deck2 = deck_of_cards[27..52]
+  end
 end
