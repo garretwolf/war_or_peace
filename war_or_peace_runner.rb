@@ -75,8 +75,8 @@ class NewGame
   end
 
   def split_deck
-    deck1 = deck_of_cards[0..26]
-    deck2 = deck_of_cards[27..52]
+    deck1 = Deck.new(deck_of_cards[0..25])
+    deck2 = Deck.new(deck_of_cards[26..51])
   end
 
   def create_players
