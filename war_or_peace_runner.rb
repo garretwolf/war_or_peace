@@ -8,10 +8,7 @@ require './lib/deck'
 require './lib/card'
 require './lib/player'
 require './lib/turn'
-
-class NewGame
-
-  def create_deck
+require './lib/new_game'
 
     deck_of_cards = []
 
@@ -72,24 +69,11 @@ class NewGame
     deck_of_cards << card52 = Card.new(:club, 'Ace', 14)
 
     deck_of_cards.shuffle
-  end
 
-  def split_deck
     deck1 = Deck.new(deck_of_cards[0..25])
     deck2 = Deck.new(deck_of_cards[26..51])
-  end
 
-  def create_players
     player1 = Player.new("Megan", deck1)
     player2 = Player.new("Aurora", deck2)
-  end
 
-  def start
-    p "Welcome to War! (or Peace) This game will be played with 52 cards."
-    p "The players today are Megan and Aurora."
-    p "Type 'GO' to start the game!"
-    p "------------------------------------------------------------------"
-
-    start_game = gets.chomp
-  end
-end
+    turn = Turn.new(player1, player2)
