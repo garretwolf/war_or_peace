@@ -78,4 +78,9 @@ class NewGame
     deck1 = deck_of_cards[0..26]
     deck2 = deck_of_cards[27..52]
   end
+
+  def create_players
+    player1 = Player.new("Megan", deck1)
+    player2 = Player.new("Aurora", deck2)
+  end
 end
