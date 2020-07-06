@@ -12,8 +12,13 @@ class Game
     p  "Type 'GO' to start the game!"
     p  "------------------------------------------------------------------"
 
-    gets.chomp
-    start_game
+    user = gets.chomp.upcase
+      if user == "GO"
+        start_game
+      else
+        p "That is an invalid key."
+        start_game
+      end
   end
 
   def start_game
